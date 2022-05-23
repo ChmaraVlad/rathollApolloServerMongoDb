@@ -23,11 +23,11 @@ module.exports = gql`
         newText: String!
     }
     type DeletePayload{
-        id: ID!
+        _id: ID!
     }
     type Mutation{
         createMessage(input: CreateMessageInput!): Message!
         updateMessage(input: UpdateMessageInput!): Message!
-        deleteMessage(id: ID): DeletePayload!
+        deleteMessage(id: ID!): DeletePayload!
     }
 `;
