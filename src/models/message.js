@@ -10,16 +10,9 @@ const messageSchema = new Schema({
     text: {
         type: String,
         trim: false
-    },
-    createdAt: {
-        type: Date, 
-        default: new Date()
-    },
-    updatedAt: {
-        type: Date, 
-        default: new Date()
-    },
-});
+    } 
+},
+{ timestamps: true });
 
 // const ERC20Coin = mongoose.model("ERC20Coin", erc20CoinSchema);
 // module.exports = { ERC20Coin };

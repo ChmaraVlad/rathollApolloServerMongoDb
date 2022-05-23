@@ -3,12 +3,14 @@ const {gql} = require("apollo-server");
 
 // this graphlQL wrapper basically lets us create a graphQL schema which will be interpreted from a javascript string
 module.exports = gql`
+scalar Date
+
     type Message{
         _id: ID!
         username: String!
         text: String!
-        createdAt: String!
-        updatedAt: String!
+        createdAt: Date!
+        updatedAt: Date!
     }
     type Query{
         messages: [Message]
